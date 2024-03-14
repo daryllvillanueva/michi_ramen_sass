@@ -1,0 +1,29 @@
+@use '../abstract' as *;
+
+.header {
+    &_wrapper {
+        flex-wrap: wrap;
+        a {
+            font-size: 3rem;
+        }
+        img {
+            @include imgCover(8rem, 8rem);
+        }
+        a {
+            color: $clr-light;
+            font-size: clamp(1rem, 7vw, 1.5rem);
+        }
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 0.4rem;
+        }
+        @include mediaQuery {
+            nav {
+                visibility: hidden;
+            }
+            .btn {
+                display: none;
+            }
+        }
+    }
+}

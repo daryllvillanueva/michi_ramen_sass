@@ -1,0 +1,23 @@
+@use '../abstract' as *;
+
+.footer {
+    background-color: #433e3b;
+    &_wrapper {
+        p {
+            font-size: clamp(1rem, 7vw, 1.5rem);
+            font-weight: 500;
+        }
+        .btn_order {
+            padding: 0.6rem 1.5rem;
+            border-radius: 0.4rem;
+        }
+        .social_icons {
+            font-size: 2rem;
+        }
+
+        @include mediaQuery {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}
